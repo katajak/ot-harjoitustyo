@@ -2,6 +2,8 @@
 
 Tässä on **lihavoitua tekstiä** ja tässä *kursivoitua tekstiä*.
 
+Täältä löytyy tehtäviä.
+
 ## Tehtävät
 
 ### Viikko 1
