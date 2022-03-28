@@ -11,3 +11,11 @@ Täältä löytyy kurssin tehtäviä.
 [gitlog.txt](https://github.com/katajak/ot-harjoitustyo/blob/master/laskarit/viikko1/gitlog.txt)
 
 [komentorivi.txt](https://github.com/katajak/ot-harjoitustyo/blob/master/laskarit/viikko1/komentorivi.txt)
+
+### Viikko 2
+
+[maksukortti](https://github.com/katajak/ot-harjoitustyo/tree/master/laskarit/viikko2/maksukortti)
+
+[unicafe](https://github.com/katajak/ot-harjoitustyo/tree/master/laskarit/viikko2/unicafe)
+
+[coverage report](https://github.com/katajak/ot-harjoitustyo/blob/master/laskarit/viikko2/coveragereport.png)
