@@ -4,6 +4,13 @@ Tässä on **lihavoitua tekstiä** ja tässä *kursivoitua tekstiä*.
 
 Täältä löytyy kurssin tehtäviä.
 
+## Harjoitustyö
+
+### Dokumentaatio
+
+[Vaatimusmäärittely](https://github.com/katajak/ot-harjoitustyo/blob/master/dokumentaatio/vaatimusmaarittely.md)
+[Työaikakirjanpito](https://github.com/katajak/ot-harjoitustyo/blob/master/dokumentaatio/tyoaikakirjanpito.txt)
+
 ## Tehtävät
 
 ### Viikko 1
