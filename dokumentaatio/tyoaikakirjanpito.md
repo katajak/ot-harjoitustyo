@@ -5,3 +5,4 @@
 
 ## 4.4.
 - Pygame testailu, ensimmäinen versio (4t)
+- Testaaminen, invoke tehtävät, muut sekalaiset (1t)
