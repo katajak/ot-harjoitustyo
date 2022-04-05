@@ -13,3 +13,4 @@ class Paddle(pygame.sprite.Sprite):
 
     def move_up(self, px):
         self.rect.y -= px
+        

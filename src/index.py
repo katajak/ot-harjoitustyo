@@ -1,5 +1,6 @@
 import pygame
 from sprites.paddle import Paddle
+from gameloop import GameLoop
 
 pygame.init()
 pygame.display.set_caption("Pong")
@@ -27,26 +28,4 @@ all_sprites.add(paddle2)
 
 fps = pygame.time.Clock()
 
-while True:
-    for event in pygame.event.get():
-        if event.type == pygame.QUIT:
-            exit()
-
-    keys = pygame.key.get_pressed()
-    if keys[pygame.K_w]:
-        paddle1.move_up(paddle1_speed)
-    if keys[pygame.K_s]:
-        paddle1.move_down(paddle1_speed)
-
-    if keys[pygame.K_UP]:
-        paddle2.move_up(paddle2_speed)
-    if keys[pygame.K_DOWN]:
-        paddle2.move_down(paddle2_speed)
-
-    screen.fill([20, 20, 20])
-
-    all_sprites.draw(screen)
-
-    pygame.display.flip()
-
-    fps.tick(60)
+GameLoop.main_loop(paddle1, paddle2, paddle1_speed, paddle2_speed, screen, all_sprites, fps)
