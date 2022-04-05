@@ -8,3 +8,6 @@ Yht. 6 tuntia
 ## 4.4.
 - Pygame testailu, ensimmäinen versio (4t)
 - Testaaminen, invoke tehtävät, muut sekalaiset (1t)
+
+## 5.4.
+- Koodin jakaminen moneen luokkaan (2t)
