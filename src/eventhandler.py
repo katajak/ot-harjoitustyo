@@ -1,7 +1,7 @@
 import pygame
 
 class EventHandler:
-    def gameplay_events(paddle1, paddle2, paddle1_speed, paddle2_speed):
+    def check_inputs(paddle1, paddle2, paddle1_speed, paddle2_speed):
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
                 exit()
