@@ -5,6 +5,9 @@ class EventHandler:
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
                 exit()
+            if event.type == pygame.KEYDOWN:
+                if event.key == pygame.K_ESCAPE:
+                    exit()
 
         keys = pygame.key.get_pressed()
         if keys[pygame.K_w]:
