@@ -1,6 +1,6 @@
 # Työaikakirjanpito
 
-Yht. 14 tuntia
+Yht. 15 tuntia
 
 ## 29.3.
 - Vaatimusmäärittely (1t)
@@ -18,4 +18,4 @@ Yht. 14 tuntia
 
 ## 12.4.
 - Lisää pallon koodausta (2t)
-- Koodin siistimistä, pylint (1t)
+- Koodin siistimistä, pylint, lisää testejä, invoke taskien korjaaminen (2t)
