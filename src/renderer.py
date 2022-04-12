@@ -1,11 +1,16 @@
 import pygame
 
 class Renderer:
-    def draw_screen(screen, all_sprites, fps):
-        screen.fill([20, 20, 20])
-        all_sprites.draw(screen)
+    def __init__(self, screen, all_sprites, fps):
+        self.screen = screen
+        self.all_sprites = all_sprites
+        self.fps = fps
+
+    def draw_screen(self):
+        self.screen.fill([20, 20, 20])
+        self.all_sprites.draw(self.screen)
 
         pygame.display.flip()
 
-        fps.tick(60)
+        self.fps.tick(60)
         

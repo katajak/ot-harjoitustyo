@@ -18,3 +18,4 @@ Yht. 13 tuntia
 
 ## 12.4.
 - Lisää pallon koodausta (2t)
+- Koodin siistimistä, pylint (1t)

@@ -1,7 +1,7 @@
 import pygame
 
 class Ball(pygame.sprite.Sprite):
-    def __init__(self, color, size, display_width, display_height):
+    def __init__(self, color, size):
         super().__init__()
 
         self.size = size
@@ -10,8 +10,6 @@ class Ball(pygame.sprite.Sprite):
         self.rect = self.image.get_rect()
         self.speed_x = 3
         self.speed_y = 3
-        self.display_width = display_width
-        self.display_height = display_height
 
     def update(self):
         self.rect.x += self.speed_x
@@ -22,4 +20,3 @@ class Ball(pygame.sprite.Sprite):
             self.speed_x = -self.speed_x
         if wall == 1:
             self.speed_y = -self.speed_y
-
