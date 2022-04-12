@@ -3,11 +3,11 @@ from sprites.paddle import Paddle
 
 class TestPaddle(unittest.TestCase):
     def setUp(self):
-        self.paddle1 = Paddle([255, 255, 255], 8, 80)
-        self.paddle2 = Paddle([255, 255, 255], 8, 80)
-
         display_width = 800
         display_height = 600
+        
+        self.paddle1 = Paddle([255, 255, 255], 8, 80, display_height)
+        self.paddle2 = Paddle([255, 255, 255], 8, 80, display_height)
         
         self.paddle1.rect.x = 20
         self.paddle1.rect.y = int(display_height/2 - 40)
