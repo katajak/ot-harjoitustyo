@@ -10,13 +10,13 @@ class Paddle(pygame.sprite.Sprite):
         self.height = height
         self.display_height = display_height
 
-    def move_down(self, px):
-        self.rect.y += px
-        if self.rect.y > self.display_height - self.height:
-            self.rect.y = self.display_height - self.height
-
     def move_up(self, px):
         self.rect.y -= px
-        if self.rect.y < 0:
+        if self.rect.y <= 0:
             self.rect.y = 0
+
+    def move_down(self, px):
+        self.rect.y += px
+        if self.rect.y >= self.display_height - self.height:
+            self.rect.y = self.display_height - self.height
         
