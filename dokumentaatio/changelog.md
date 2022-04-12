@@ -5,3 +5,8 @@
 - Pelaaja 1 voi liikuttaa mailaa w ja s näppäimillä, pelaaja 2 ylä- ja alanuolella.
 - Lisätty Paddle-luokka
 - Lisätty monia muita luokkia gameloop, eventhandler, renderer
+
+## Viikko 4
+
+- Mailaa ei voi enää liikuttaa näytön ulkopuolelle
+- Lisätty alkeellinen versio pallosta (tällä hetkellä pallo vain pomppii näytön reunoja pitkin)
