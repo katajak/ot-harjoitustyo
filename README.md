@@ -29,3 +29,5 @@ poetry run invoke lint
 [Työaikakirjanpito](https://github.com/katajak/ot-harjoitustyo/blob/master/dokumentaatio/tyoaikakirjanpito.md)
 
 [Changelog](https://github.com/katajak/ot-harjoitustyo/blob/master/dokumentaatio/changelog.md)
+
+[Arkkitehtuuri](https://github.com/katajak/ot-harjoitustyo/blob/master/dokumentaatio/arkkitehtuuri.md)
