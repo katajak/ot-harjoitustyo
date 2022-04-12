@@ -2,6 +2,8 @@
 
 ## Käyttöohjeet
 
+Suorita komennot projektin juurihakemistossa
+
 ### Asennus
 
 poetry install
