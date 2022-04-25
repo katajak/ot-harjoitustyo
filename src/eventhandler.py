@@ -3,13 +3,14 @@ import pygame
 
 class EventHandler:
     def __init__(self, paddle1, paddle2, paddle1_speed, paddle2_speed,
-                 ball, display_size):
+                 ball, display_size, score):
         self.paddle1 = paddle1
         self.paddle2 = paddle2
         self.paddle1_speed = paddle1_speed
         self.paddle2_speed = paddle2_speed
         self.ball = ball
         self.display_size = display_size
+        self.score = score
 
     def check_inputs(self):
         for event in pygame.event.get():
@@ -35,9 +36,15 @@ class EventHandler:
 
     def wall_rebound(self):
         if self.ball.rect.x <= 0:
-            self.ball.wall_rebound(0)
+            self.score[1] += 1
+            print("\nScore is now:")
+            print(self.score)
+            self.ball.reset_pos(2)
         if self.ball.rect.x >= self.display_size[0] - self.ball.size:
-            self.ball.wall_rebound(0)
+            self.score[0] += 1
+            print("\nScore is now:")
+            print(self.score)
+            self.ball.reset_pos(1)
         if self.ball.rect.y <= 0:
             self.ball.wall_rebound(1)
         if self.ball.rect.y >= self.display_size[1] - self.ball.size:

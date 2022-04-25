@@ -9,7 +9,7 @@ pygame.init()
 pygame.display.set_caption("Pong")
 DISPLAY_WIDTH = 800
 DISPLAY_HEIGHT = 600
-DISPLAY_SIZE = [DISPLAY_WIDTH, DISPLAY_HEIGHT]
+DISPLAY_SIZE = (DISPLAY_WIDTH, DISPLAY_HEIGHT)
 
 screen = pygame.display.set_mode(DISPLAY_SIZE)
 
@@ -20,6 +20,10 @@ ball_color = [255, 255, 255]
 PADDLE1_SPEED = 7
 PADDLE2_SPEED = 7
 
+player1_score = 0
+player2_score = 0
+score = [player1_score, player2_score]
+
 paddle1 = Paddle(paddle1_color, 8, 80, DISPLAY_SIZE[1])
 paddle1.rect.x = 30
 paddle1.rect.y = int(DISPLAY_SIZE[1]/2 - 40)
@@ -28,7 +32,7 @@ paddle2 = Paddle(paddle2_color, 8, 80, DISPLAY_SIZE[1])
 paddle2.rect.x = DISPLAY_SIZE[0] - 30 - 8
 paddle2.rect.y = int(DISPLAY_SIZE[1]/2 - 40)
 
-ball = Ball(ball_color, 8)
+ball = Ball(ball_color, 8, DISPLAY_SIZE)
 ball.rect.x = 400
 ball.rect.y = 300
 
@@ -41,7 +45,7 @@ fps = pygame.time.Clock()
 
 renderer = Renderer(screen, all_sprites, fps)
 eventhandler = EventHandler(paddle1, paddle2, PADDLE1_SPEED, PADDLE2_SPEED,
-                            ball, DISPLAY_SIZE)
+                            ball, DISPLAY_SIZE, score)
 gameloop = GameLoop(renderer, eventhandler)
 
 gameloop.main_loop()
