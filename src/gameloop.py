@@ -9,5 +9,6 @@ class GameLoop:
         while True:
             self.eventhandler.check_inputs()
             self.eventhandler.update_ball_pos()
+            self.eventhandler.paddle_rebound()
             self.eventhandler.wall_rebound()
             self.renderer.draw_screen()

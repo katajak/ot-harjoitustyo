@@ -42,3 +42,9 @@ class EventHandler:
             self.ball.wall_rebound(1)
         if self.ball.rect.y >= self.display_size[1] - self.ball.size:
             self.ball.wall_rebound(1)
+
+    def paddle_rebound(self):
+        if pygame.sprite.collide_rect(self.paddle1, self.ball) == 1:
+            self.ball.paddle_rebound(1)
+        if pygame.sprite.collide_rect(self.paddle2, self.ball) == 1:
+            self.ball.paddle_rebound(2)

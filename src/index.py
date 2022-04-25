@@ -17,8 +17,8 @@ paddle1_color = [0, 255, 0]
 paddle2_color = [0, 0, 255]
 ball_color = [255, 255, 255]
 
-PADDLE1_SPEED = 6
-PADDLE2_SPEED = 6
+PADDLE1_SPEED = 7
+PADDLE2_SPEED = 7
 
 paddle1 = Paddle(paddle1_color, 8, 80, DISPLAY_SIZE[1])
 paddle1.rect.x = 30
