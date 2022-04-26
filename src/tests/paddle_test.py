@@ -23,3 +23,10 @@ class TestPaddle(unittest.TestCase):
         self.paddle2.move_down(20)
         self.paddle2.move_up(30)
         self.assertEqual(self.paddle1.rect.y, self.paddle2.rect.y)
+
+    def test_paddle_cant_go_offscreen(self):
+        self.paddle1.move_up(9999)
+        self.paddle2.move_down(9999)
+        self.assertEqual(self.paddle1.rect.y, 0)
+        self.assertEqual(self.paddle2.rect.y, 600-80)
+        
