@@ -55,3 +55,13 @@ class EventHandler:
             self.ball.paddle_rebound(1)
         if pygame.sprite.collide_rect(self.paddle2, self.ball) == 1:
             self.ball.paddle_rebound(2)
+
+    def check_game_clear(self):
+        if self.score[0] == 11 or self.score[1] == 11:
+            if self.score[0] == 11:
+                print("\nGame ended. Player 1 won!")
+            if self.score[1] == 11:
+                print("\nGame ended. Player 2 won!")
+            print("\nFinal result:")
+            print(f"{self.score[0]} - {self.score[1]}")
+            sys.exit()

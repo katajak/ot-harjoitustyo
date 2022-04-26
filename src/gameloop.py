@@ -11,4 +11,5 @@ class GameLoop:
             self.eventhandler.update_ball_pos()
             self.eventhandler.paddle_rebound()
             self.eventhandler.wall_rebound()
+            self.eventhandler.check_game_clear()
             self.renderer.draw_screen()
