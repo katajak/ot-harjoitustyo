@@ -1,5 +1,5 @@
-import pygame
 import random
+import pygame
 
 class Ball(pygame.sprite.Sprite):
     def __init__(self, color, size, display_size):

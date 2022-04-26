@@ -20,9 +20,9 @@ ball_color = [255, 255, 255]
 PADDLE1_SPEED = 7
 PADDLE2_SPEED = 7
 
-player1_score = 0
-player2_score = 0
-score = [player1_score, player2_score]
+PLAYER1_SCORE = 0
+PLAYER2_SCORE = 0
+score = [PLAYER1_SCORE, PLAYER2_SCORE]
 
 paddle1 = Paddle(paddle1_color, 8, 80, DISPLAY_SIZE[1])
 paddle1.rect.x = 30
