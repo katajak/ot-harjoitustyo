@@ -34,8 +34,8 @@ class Ball(pygame.sprite.Sprite):
 
     def paddle_rebound(self, paddle):
         if paddle == 1:
-            self.speed_x = random.uniform(2, 9)
+            self.speed_x = random.uniform(2, 10)
             self.speed_y = random.uniform(2, 10)
         if paddle == 2:
-            self.speed_x = random.uniform(-2, -9)
+            self.speed_x = random.uniform(-2, -10)
             self.speed_y = random.uniform(-2, -10)

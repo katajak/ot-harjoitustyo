@@ -38,12 +38,12 @@ class EventHandler:
         if self.ball.rect.x <= 0:
             self.score[1] += 1
             print("\nScore is now:")
-            print(self.score)
+            print(f"{self.score[0]} - {self.score[1]}")
             self.ball.reset_pos(2)
         if self.ball.rect.x >= self.display_size[0] - self.ball.size:
             self.score[0] += 1
             print("\nScore is now:")
-            print(self.score)
+            print(f"{self.score[0]} - {self.score[1]}")
             self.ball.reset_pos(1)
         if self.ball.rect.y <= 0:
             self.ball.wall_rebound(1)
