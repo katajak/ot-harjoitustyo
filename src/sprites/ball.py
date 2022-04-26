@@ -26,11 +26,8 @@ class Ball(pygame.sprite.Sprite):
         self.rect.x += self.speed_x
         self.rect.y += self.speed_y
 
-    def wall_rebound(self, wall):
-        if wall == 0:
-            self.speed_x = -self.speed_x
-        if wall == 1:
-            self.speed_y = -self.speed_y
+    def wall_rebound(self):
+        self.speed_y = -self.speed_y
 
     def paddle_rebound(self, paddle):
         if paddle == 1:

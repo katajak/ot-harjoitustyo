@@ -46,9 +46,9 @@ class EventHandler:
             print(f"{self.score[0]} - {self.score[1]}")
             self.ball.reset_pos(1)
         if self.ball.rect.y <= 0:
-            self.ball.wall_rebound(1)
+            self.ball.wall_rebound()
         if self.ball.rect.y >= self.display_size[1] - self.ball.size:
-            self.ball.wall_rebound(1)
+            self.ball.wall_rebound()
 
     def paddle_rebound(self):
         if pygame.sprite.collide_rect(self.paddle1, self.ball) == 1:
