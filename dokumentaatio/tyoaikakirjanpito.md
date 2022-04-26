@@ -1,6 +1,6 @@
 # Työaikakirjanpito
 
-Yht. 15 tuntia
+Yht. 19 tuntia
 
 ## 29.3.
 - Vaatimusmäärittely (1t)
@@ -19,3 +19,9 @@ Yht. 15 tuntia
 ## 12.4.
 - Lisää pallon koodausta (2t)
 - Koodin siistimistä, pylint, lisää testejä, invoke taskien korjaaminen (2t)
+
+## 25.4.
+- Pallon kimpoaminen mailasta, pistetilanne (4t)
+
+## 26.4.
+- Peli loppuu 11 pisteeseen, koodin siistimistä, lisää testejä (2t)

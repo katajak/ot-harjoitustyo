@@ -7,8 +7,8 @@ Sovellus on pong peli toteutettu pygamella.
 ## Perusversion toiminnallisuudet
 
 - Kaksi pelaajaa pystyy liikuttaa omaa mailaansa (**TEHTY**)
-- Peli pitää laskua pisteistä
-- Peli loppuu kun pelaaja saavuttaa 11 pistettä
+- Peli pitää laskua pisteistä (**TEHTY**)
+- Peli loppuu kun pelaaja saavuttaa 11 pistettä (**TEHTY**)
 
 ## Jatkokehitysideat
 

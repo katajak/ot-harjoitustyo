@@ -10,3 +10,10 @@
 
 - Mailaa ei voi enää liikuttaa näytön ulkopuolelle
 - Lisätty alkeellinen versio pallosta (tällä hetkellä pallo vain pomppii näytön reunoja pitkin)
+
+## Viikko 5
+
+- Pelin ensimmäinen perustoimiva versio
+- Pallo kimpoaa mailasta randomisti
+- Peli pitää yllä pistetilannetta (tällä hetkellä terminalissa)
+- Peli loppuu kun pelaaja saavuttaa 11 pistettä
