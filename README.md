@@ -1,6 +1,6 @@
 # Pong peli (ot-harjoitustyo)
 
-Perinteinen kahden pelaajan Pong. Pelaaja 1 liikuttaa mailaa W, S näppäimillä ja Pelaaja 2 ylä- ja alanuolilla.
+Perinteinen kahden pelaajan Pong. Pelaaja 1 liikuttaa mailaa W, S näppäimillä ja Pelaaja 2 ylä- ja alanuolilla. Pistetilanne näkyy terminalissa ja peli loppuu 11 pisteeseen.
 
 ## Uusin release
 
