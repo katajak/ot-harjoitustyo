@@ -1,6 +1,6 @@
 # Työaikakirjanpito
 
-Yht. 19 tuntia
+Yht. 21 tuntia
 
 ## 29.3.
 - Vaatimusmäärittely (1t)
