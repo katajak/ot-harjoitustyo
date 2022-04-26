@@ -1,5 +1,11 @@
 # Pong peli (ot-harjoitustyo)
 
+Perinteinen kahden pelaajan Pong. Pelaaja 1 liikuttaa mailaa W, S näppäimillä ja Pelaaja 2 ylä- ja alanuolilla.
+
+## Uusin release
+
+[Release](https://github.com/katajak/ot-harjoitustyo/releases/tag/viikko5)
+
 ## Käyttöohjeet
 
 Suorita komennot projektin juurihakemistossa
@@ -15,6 +21,8 @@ poetry run invoke start
 ### Testit
 
 poetry run invoke test
+
+### Covereage-raportti
 
 poetry run invoke coverage-report
 
