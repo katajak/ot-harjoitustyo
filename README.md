@@ -22,7 +22,7 @@ poetry run invoke start
 
 poetry run invoke test
 
-### Covereage-raportti
+### Coverage-raportti
 
 poetry run invoke coverage-report
 
