@@ -33,8 +33,8 @@ paddle2.rect.x = DISPLAY_SIZE[0] - 30 - 8
 paddle2.rect.y = int(DISPLAY_SIZE[1]/2 - 40)
 
 ball = Ball(ball_color, 8, DISPLAY_SIZE)
-ball.rect.x = 400
-ball.rect.y = 300
+ball.rect.x = DISPLAY_SIZE[0]/2 + 8
+ball.rect.y = DISPLAY_SIZE[1]/2 + 8
 
 all_sprites = pygame.sprite.Group()
 all_sprites.add(paddle1)
