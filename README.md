@@ -32,6 +32,8 @@ poetry run invoke lint
 
 ## Dokumentaatio
 
+[Käyttöohje](https://github.com/katajak/ot-harjoitustyo/blob/master/dokumentaatio/kayttoohje.md)
+
 [Vaatimusmäärittely](https://github.com/katajak/ot-harjoitustyo/blob/master/dokumentaatio/vaatimusmaarittely.md)
 
 [Työaikakirjanpito](https://github.com/katajak/ot-harjoitustyo/blob/master/dokumentaatio/tyoaikakirjanpito.md)

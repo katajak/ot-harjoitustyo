@@ -17,3 +17,8 @@
 - Pallo kimpoaa mailasta randomisti
 - Peli pitää yllä pistetilannetta (tällä hetkellä terminalissa)
 - Peli loppuu kun pelaaja saavuttaa 11 pistettä
+
+## Viikko 6
+
+- Pistetilanne näkyy pelissä
+- Alustava loputon moodi jonka saa päälle muokkaamalla yhden rivin (katso käyttöohje)

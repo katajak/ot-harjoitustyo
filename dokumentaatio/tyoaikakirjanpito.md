@@ -1,6 +1,6 @@
 # Työaikakirjanpito
 
-Yht. 21 tuntia
+Yht. 23 tuntia
 
 ## 29.3.
 - Vaatimusmäärittely (1t)
@@ -25,3 +25,6 @@ Yht. 21 tuntia
 
 ## 26.4.
 - Peli loppuu 11 pisteeseen, koodin siistimistä, lisää testejä (2t)
+
+## 3.5.
+- Alustava loputon moodi, pistetilanne näytetään näytöllä, testejä (2t)

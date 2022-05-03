@@ -14,5 +14,5 @@ Sovellus on pong peli toteutettu pygamella.
 
 - Mahdollisuus pelata yksin
   - Voi valita vaikeustason
-- Loputon moodi jossa pelataan niin pitkään kuin halutaan
+- Loputon moodi jossa pelataan niin pitkään kuin halutaan (**ALUSTAVASTI TEHTY**
 - Pelistä tallennetaan tietokantaan erilaisia tilastoja kuten pelattujen pelien määrä ja tulos
