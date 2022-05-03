@@ -46,7 +46,7 @@ class TestEventhandler(unittest.TestCase):
     def test_game_clear(self):
         self.score[0] = 9
         self.score[0] += 1
-        self.assertEqual(self.eventhandler.check_game_clear(), None)
+        self.assertEqual(self.eventhandler.check_game_clear(), False)
         self.score[0] += 1
         self.assertEqual(self.eventhandler.check_game_clear(), True)
 

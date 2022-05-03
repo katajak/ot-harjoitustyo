@@ -18,6 +18,7 @@ class EventHandler:
             if event.type == pygame.KEYDOWN:
                 if event.key == pygame.K_ESCAPE:
                     return True
+        return False
 
     def check_inputs(self):
         keys = pygame.key.get_pressed()
@@ -61,3 +62,4 @@ class EventHandler:
             print("\nFinal result:")
             print(f"{self.score[0]} - {self.score[1]}")
             return True
+        return False
