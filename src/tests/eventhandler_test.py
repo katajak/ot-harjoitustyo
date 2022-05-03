@@ -42,3 +42,50 @@ class TestEventhandler(unittest.TestCase):
             self.eventhandler.update_ball_pos()
         self.assertEqual(self.ball.rect.x, 400+8+3*30)
         self.assertEqual(self.ball.rect.y, 300+8)
+
+    def test_game_clear(self):
+        self.score[0] = 9
+        self.score[0] += 1
+        self.assertEqual(self.eventhandler.check_game_clear(), None)
+        self.score[0] += 1
+        self.assertEqual(self.eventhandler.check_game_clear(), True)
+
+    def test_p1_score(self):
+        self.ball.rect.x = 0
+        self.eventhandler.wall_rebound()
+        self.assertEqual(self.score[0], 0)
+        self.assertEqual(self.score[1], 1)
+
+    def test_p2_score(self):
+        self.ball.rect.x = 800
+        self.eventhandler.wall_rebound()
+        self.assertEqual(self.score[0], 1)
+        self.assertEqual(self.score[1], 0)
+
+    def test_top_wall_rebound(self):
+        self.ball.speed_x = 3
+        self.ball.speed_y = -3
+        self.ball.rect.x = 400
+        self.ball.rect.y = 6
+        self.eventhandler.update_ball_pos()
+        self.eventhandler.update_ball_pos()
+        self.eventhandler.wall_rebound()
+        self.eventhandler.update_ball_pos()
+        self.eventhandler.update_ball_pos()
+        self.eventhandler.update_ball_pos()
+
+        self.assertEqual(self.ball.rect.y, 9)
+
+    def test_bottom_wall_rebound(self):
+        self.ball.speed_x = 3
+        self.ball.speed_y = 3
+        self.ball.rect.x = 400
+        self.ball.rect.y = 794
+        self.eventhandler.update_ball_pos()
+        self.eventhandler.update_ball_pos()
+        self.eventhandler.wall_rebound()
+        self.eventhandler.update_ball_pos()
+        self.eventhandler.update_ball_pos()
+        self.eventhandler.update_ball_pos()
+
+        self.assertEqual(self.ball.rect.y, 791)

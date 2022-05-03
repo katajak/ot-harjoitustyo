@@ -1,4 +1,3 @@
-import sys
 import pygame
 
 class EventHandler:
@@ -12,14 +11,15 @@ class EventHandler:
         self.display_size = display_size
         self.score = score
 
-    def check_inputs(self):
+    def quit_game(self):
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
-                sys.exit()
+                return True
             if event.type == pygame.KEYDOWN:
                 if event.key == pygame.K_ESCAPE:
-                    sys.exit()
+                    return True
 
+    def check_inputs(self):
         keys = pygame.key.get_pressed()
         if keys[pygame.K_w]:
             self.paddle1.move_up(self.paddle1_speed)
@@ -60,4 +60,4 @@ class EventHandler:
                 print("\nGame ended. Player 2 won!")
             print("\nFinal result:")
             print(f"{self.score[0]} - {self.score[1]}")
-            sys.exit()
+            return True

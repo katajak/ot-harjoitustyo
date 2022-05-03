@@ -13,7 +13,7 @@ DISPLAY_SIZE = (DISPLAY_WIDTH, DISPLAY_HEIGHT)
 
 screen = pygame.display.set_mode(DISPLAY_SIZE)
 
-endless = False
+ENDLESS = False
 
 paddle1_color = [0, 255, 0]
 paddle2_color = [0, 0, 255]
@@ -48,6 +48,6 @@ fps = pygame.time.Clock()
 renderer = Renderer(screen, all_sprites, fps, score, DISPLAY_SIZE)
 eventhandler = EventHandler(paddle1, paddle2, PADDLE1_SPEED, PADDLE2_SPEED,
                             ball, DISPLAY_SIZE, score)
-gameloop = GameLoop(renderer, eventhandler, endless)
+gameloop = GameLoop(renderer, eventhandler, ENDLESS)
 
 gameloop.main_loop()
