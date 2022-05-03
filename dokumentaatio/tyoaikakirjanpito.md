@@ -1,6 +1,6 @@
 # Työaikakirjanpito
 
-Yht. 23 tuntia
+Yht. 24 tuntia
 
 ## 29.3.
 - Vaatimusmäärittely (1t)
@@ -28,3 +28,4 @@ Yht. 23 tuntia
 
 ## 3.5.
 - Alustava loputon moodi, pistetilanne näytetään näytöllä, testejä (2t)
+- Docstring aloittaminen (1t)

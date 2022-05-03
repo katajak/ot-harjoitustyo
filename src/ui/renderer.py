@@ -1,7 +1,28 @@
 import pygame
 
 class Renderer:
+    """Luokka, joka vastaa näytön piirrosta ja päivityksestä.
+
+    Attributes:
+        screen: pygame näyttö
+        all_sprites: spritejen ryhmä, jossa kaikki spritet (2 mailaa ja pallo)
+        fps: pygame kello
+        score: molempien pelaajien pisteet
+        display_size: näytön koko (800x600)
+    """
+
     def __init__(self, screen, all_sprites, fps, score, display_size):
+        """Luokan konstruktori
+
+        Args:
+            screen: pygame näyttö
+            all_sprites: spritejen ryhmä, jossa kaikki spritet (2 mailaa ja pallo)
+            fps: pygame kello
+            score: molempien pelaajien pisteet
+            scorefont: fontti pisteiden näyttämistä varten
+            display_size: näytön koko (800x600)
+        """
+
         self.screen = screen
         self.all_sprites = all_sprites
         self.fps = fps
@@ -10,6 +31,10 @@ class Renderer:
         self.display_size = display_size
 
     def draw_screen(self):
+        """Piirtää näytön
+        
+        """
+
         self.screen.fill([20, 20, 20])
 
         scoredisplay1 = self.scorefont.render(f"{self.score[0]}", True, (255, 255, 255))
