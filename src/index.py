@@ -15,30 +15,28 @@ screen = pygame.display.set_mode(DISPLAY_SIZE)
 
 SINGLEPLAYER = False
 ENDLESS = False
-rally = 0
+score = [0, 0]
 
 paddle1_color = [0, 255, 0]
 paddle2_color = [0, 0, 255]
 ball_color = [255, 255, 255]
 
-PADDLE1_SPEED = 7
-PADDLE2_SPEED = 7
+PADDLE_HEIGHTS = (80, 80)
+PADDLE_SPEEDS = (7, 7)
 
-PLAYER1_SCORE = 0
-PLAYER2_SCORE = 0
-score = [PLAYER1_SCORE, PLAYER2_SCORE]
-
-paddle1 = Paddle(paddle1_color, 8, 80, DISPLAY_SIZE[1])
+paddle1 = Paddle(paddle1_color, 8, PADDLE_HEIGHTS[0], DISPLAY_SIZE[1])
 paddle1.rect.x = 30
-paddle1.rect.y = int(DISPLAY_SIZE[1]/2 - 40)
+paddle1.rect.y = int(DISPLAY_SIZE[1]/2 - PADDLE_HEIGHTS[0]/2)
 
-paddle2 = Paddle(paddle2_color, 8, 80, DISPLAY_SIZE[1])
+paddle2 = Paddle(paddle2_color, 8, PADDLE_HEIGHTS[1], DISPLAY_SIZE[1])
 paddle2.rect.x = DISPLAY_SIZE[0] - 30 - 8
-paddle2.rect.y = int(DISPLAY_SIZE[1]/2 - 40)
+paddle2.rect.y = int(DISPLAY_SIZE[1]/2 - PADDLE_HEIGHTS[1]/2)
+
+paddles = (paddle1, paddle2)
 
 ball = Ball(ball_color, 8, DISPLAY_SIZE)
-ball.rect.x = DISPLAY_SIZE[0]/2 + 8
-ball.rect.y = DISPLAY_SIZE[1]/2 + 8
+ball.rect.x = DISPLAY_SIZE[0]/2 - 4
+ball.rect.y = DISPLAY_SIZE[1]/2 - 4
 
 all_sprites = pygame.sprite.Group()
 all_sprites.add(paddle1)
@@ -48,8 +46,8 @@ all_sprites.add(ball)
 fps = pygame.time.Clock()
 
 renderer = Renderer(screen, all_sprites, fps, score, DISPLAY_SIZE)
-eventhandler = EventHandler(paddle1, paddle2, PADDLE1_SPEED, PADDLE2_SPEED,
-                            ball, DISPLAY_SIZE, score, rally)
+eventhandler = EventHandler(paddles, PADDLE_SPEEDS,
+                            ball, DISPLAY_SIZE, score)
 gameloop = GameLoop(renderer, eventhandler, ENDLESS)
 
 gameloop.main_loop()

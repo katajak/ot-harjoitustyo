@@ -1,16 +1,14 @@
 import pygame
 
 class EventHandler:
-    def __init__(self, paddle1, paddle2, paddle1_speed, paddle2_speed,
-                 ball, display_size, score, rally):
-        self.paddle1 = paddle1
-        self.paddle2 = paddle2
-        self.paddle1_speed = paddle1_speed
-        self.paddle2_speed = paddle2_speed
+    def __init__(self, paddles, paddle_speeds,
+                 ball, display_size, score):
+        self.paddles = paddles
+        self.paddle_speeds = paddle_speeds
         self.ball = ball
         self.display_size = display_size
         self.score = score
-        self.rally = rally
+        self.rally = 0
 
     def quit_game(self):
         for event in pygame.event.get():
@@ -24,14 +22,14 @@ class EventHandler:
     def check_inputs(self):
         keys = pygame.key.get_pressed()
         if keys[pygame.K_w]:
-            self.paddle1.move_up(self.paddle1_speed)
+            self.paddles[0].move_up(self.paddle_speeds[0])
         if keys[pygame.K_s]:
-            self.paddle1.move_down(self.paddle1_speed)
+            self.paddles[0].move_down(self.paddle_speeds[0])
 
         if keys[pygame.K_UP]:
-            self.paddle2.move_up(self.paddle2_speed)
+            self.paddles[1].move_up(self.paddle_speeds[1])
         if keys[pygame.K_DOWN]:
-            self.paddle2.move_down(self.paddle2_speed)
+            self.paddles[1].move_down(self.paddle_speeds[1])
 
     def update_ball_pos(self):
         self.ball.update()
@@ -51,10 +49,10 @@ class EventHandler:
             self.ball.wall_rebound()
 
     def paddle_rebound(self):
-        if pygame.sprite.collide_rect(self.paddle1, self.ball) == 1:
+        if pygame.sprite.collide_rect(self.paddles[0], self.ball) == 1:
             self.ball.paddle_rebound(1)
             self.rally += 1
-        if pygame.sprite.collide_rect(self.paddle2, self.ball) == 1:
+        if pygame.sprite.collide_rect(self.paddles[1], self.ball) == 1:
             self.ball.paddle_rebound(2)
             self.rally += 1
 
