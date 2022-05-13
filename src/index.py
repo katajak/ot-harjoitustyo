@@ -1,4 +1,5 @@
 import pygame
+import database
 from sprites.paddle import Paddle
 from sprites.ball import Ball
 from gameloop import GameLoop
@@ -13,7 +14,7 @@ DISPLAY_SIZE = (DISPLAY_WIDTH, DISPLAY_HEIGHT)
 
 screen = pygame.display.set_mode(DISPLAY_SIZE)
 
-SINGLEPLAYER = False
+PLAYERS = 2
 ENDLESS = False
 score = [0, 0]
 
@@ -45,9 +46,11 @@ all_sprites.add(ball)
 
 fps = pygame.time.Clock()
 
+db_connection = database.create_connection()
+database.create_table(db_connection)
+
 renderer = Renderer(screen, all_sprites, fps, score, DISPLAY_SIZE)
-eventhandler = EventHandler(paddles, PADDLE_SPEEDS,
-                            ball, DISPLAY_SIZE, score)
+eventhandler = EventHandler(paddles, PADDLE_SPEEDS, ball, DISPLAY_SIZE, score, PLAYERS, ENDLESS, db_connection)
 gameloop = GameLoop(renderer, eventhandler, ENDLESS)
 
 gameloop.main_loop()
