@@ -50,7 +50,8 @@ db_connection = database.create_connection()
 database.create_table(db_connection)
 
 renderer = Renderer(screen, all_sprites, fps, score, DISPLAY_SIZE)
-eventhandler = EventHandler(paddles, PADDLE_SPEEDS, ball, DISPLAY_SIZE, score, PLAYERS, ENDLESS, db_connection)
+eventhandler = EventHandler(paddles, PADDLE_SPEEDS, ball, DISPLAY_SIZE,
+                            score, PLAYERS, ENDLESS, db_connection)
 gameloop = GameLoop(renderer, eventhandler, ENDLESS)
 
 gameloop.main_loop()

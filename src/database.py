@@ -12,11 +12,11 @@ def create_connection():
 
 def create_table(connection):
     try:
-        c = connection.cursor()
-        c.execute("""CREATE TABLE IF NOT EXISTS stats (id INTEGER PRIMARY KEY,
+        conn = connection.cursor()
+        conn.execute("""CREATE TABLE IF NOT EXISTS stats (id INTEGER PRIMARY KEY,
                   players INTEGER, endless BOOLEAN, p1_score INTEGER, p2_score INTEGER,
                   max_rally INTEGER)""")
-                  
+
     except Error:
         print(Error)
 
@@ -25,8 +25,8 @@ def insert_data(connection, players, endless, score, max_rally):
         stats = (players, endless, score[0], score[1], max_rally)
         sql = ("""INSERT INTO stats (players, endless, p1_score, p2_score, max_rally)
                VALUES (?,?,?,?,?)""")
-        c = connection.cursor()
-        c.execute(sql, stats)
+        conn = connection.cursor()
+        conn.execute(sql, stats)
         connection.commit()
 
         connection.close()

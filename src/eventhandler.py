@@ -2,7 +2,8 @@ import pygame
 import database
 
 class EventHandler:
-    def __init__(self, paddles, paddle_speeds, ball, display_size, score, players, endless, db_connection):
+    def __init__(self, paddles, paddle_speeds, ball, display_size,
+                 score, players, endless, db_connection):
         self.paddles = paddles
         self.paddle_speeds = paddle_speeds
         self.ball = ball
@@ -74,6 +75,7 @@ class EventHandler:
             print(f"{self.score[0]} - {self.score[1]}")
             print("\nLongest rally this game:")
             print(self.max_rally)
-            database.insert_data(self.db_connection, self.players, self.endless, self.score, self.max_rally)
+            database.insert_data(self.db_connection, self.players,
+                                 self.endless, self.score, self.max_rally)
             return True
         return False

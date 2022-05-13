@@ -36,8 +36,7 @@ class Paddle(pygame.sprite.Sprite):
         """
 
         self.rect.y -= n_pixels
-        if self.rect.y <= 0:
-            self.rect.y = 0
+        self.rect.y = max(self.rect.y, 0)
 
     def move_down(self, n_pixels):
         """Siirtää mailaa alaspäin n pikseliä.
