@@ -1,9 +1,10 @@
+import sys
 import pygame
 import database
 
 class EventHandler:
-    def __init__(self, paddles, paddle_speeds, ball, display_size,
-                 score, players, endless, db_connection):
+    def __init__(self, paddles, paddle_speeds, ball,
+                 display_size, score, players, endless):
         self.paddles = paddles
         self.paddle_speeds = paddle_speeds
         self.ball = ball
@@ -11,18 +12,16 @@ class EventHandler:
         self.score = score
         self.players = players
         self.endless = endless
-        self.db_connection = db_connection
         self.rally = 0
         self.max_rally = 0
 
     def quit_game(self):
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
-                return True
+                sys.exit()
             if event.type == pygame.KEYDOWN:
                 if event.key == pygame.K_ESCAPE:
-                    return True
-        return False
+                    sys.exit()
 
     def check_inputs(self):
         keys = pygame.key.get_pressed()
@@ -75,7 +74,8 @@ class EventHandler:
             print(f"{self.score[0]} - {self.score[1]}")
             print("\nLongest rally this game:")
             print(self.max_rally)
-            database.insert_data(self.db_connection, self.players,
+            db_connection = database.create_connection()
+            database.insert_data(db_connection, self.players,
                                  self.endless, self.score, self.max_rally)
             return True
         return False

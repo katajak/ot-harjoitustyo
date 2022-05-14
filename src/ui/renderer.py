@@ -35,7 +35,7 @@ class Renderer:
         
         """
 
-        self.screen.fill([20, 20, 20])
+        self.screen.fill([0, 0, 0])
 
         scoredisplay1 = self.scorefont.render(f"{self.score[0]}", True, (255, 255, 255))
         scoredisplay1_rect = scoredisplay1.get_rect(center=(self.display_size[0]/2 - 100, 30))

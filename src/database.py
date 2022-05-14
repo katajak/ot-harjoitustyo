@@ -16,6 +16,7 @@ def create_table(connection):
         conn.execute("""CREATE TABLE IF NOT EXISTS stats (id INTEGER PRIMARY KEY,
                   players INTEGER, endless BOOLEAN, p1_score INTEGER, p2_score INTEGER,
                   max_rally INTEGER)""")
+        connection.close()
 
     except Error:
         print(Error)
