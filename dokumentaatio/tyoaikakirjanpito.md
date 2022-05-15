@@ -1,6 +1,6 @@
 # Työaikakirjanpito
 
-Yht. 24 tuntia
+Yht. 36 tuntia
 
 ## 29.3.
 - Vaatimusmäärittely (1t)
@@ -29,3 +29,19 @@ Yht. 24 tuntia
 ## 3.5.
 - Alustava loputon moodi, pistetilanne näytetään näytöllä, testejä (2t)
 - Docstring aloittaminen (1t)
+
+## 12.5.
+- SQLite harjottelua (1t)
+
+## 13.5.
+- Pallorallin pituuden mittaus (1t)
+- Koodin siistiminen (1t)
+- Tilastojen tallennus tietokantaan (1t)
+
+## 14.5.
+- Aloitusruutu eli title screen (3t)
+- Yksinpelin koodauksen aloittaminen (2t)
+
+## 15.5.
+- Yksinpeli, vaikeustasovalinnat (2t)
+- Tilastot aloitusruudussa (1t)

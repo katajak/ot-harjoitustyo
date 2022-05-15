@@ -22,3 +22,9 @@
 
 - Pistetilanne näkyy pelissä
 - Alustava loputon moodi jonka saa päälle muokkaamalla yhden rivin (katso käyttöohje)
+
+## Loppupalautus
+
+- Aloitusnäyttö ennen pelin alkua, jossa ohjeet ja tilastoja
+- Voi pelata myös yksin, vaikeustasovalinta, loputtoman moodin valinta
+- Tilastojen tallennus tietokantaan

@@ -2,7 +2,7 @@
 
 ## Sovelluksen tarkoitus
 
-Sovellus on pong peli toteutettu pygamella.
+Sovellus on Pong peli toteutettu pygamella.
 
 ## Perusversion toiminnallisuudet
 
@@ -12,7 +12,7 @@ Sovellus on pong peli toteutettu pygamella.
 
 ## Jatkokehitysideat
 
-- Mahdollisuus pelata yksin
-  - Voi valita vaikeustason
-- Loputon moodi jossa pelataan niin pitkään kuin halutaan (**ALUSTAVASTI TEHTY**
-- Pelistä tallennetaan tietokantaan erilaisia tilastoja kuten pelattujen pelien määrä ja tulos
+- Mahdollisuus pelata yksin (**TEHTY**)
+  - Voi valita vaikeustason (**TEHTY**)
+- Loputon moodi jossa pelataan niin pitkään kuin halutaan (**TEHTY**)
+- Pelistä tallennetaan tietokantaan erilaisia tilastoja kuten pisin palloralli ja tulos (**TEHTY**)

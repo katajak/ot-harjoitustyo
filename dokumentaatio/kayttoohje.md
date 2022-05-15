@@ -2,7 +2,15 @@
 
 ## Konfigurointi
 
-Tällä hetkellä pelin loputtoman moodin saa päälle muuttamalla tiedostossa index.py rivi 16 ENDLESS = True
+Pelin aloitusruudussa toimivat seuraavat valinnat (näppäimistöllä):
+
+- E: Endless eli loputon moodi
+- N: Normal eli perusmoodi (11 pisteeseen)
+- 1: Yhden pelaajan peli
+  - 7: Helppo vaikeustaso
+  - 8: Kohtalainen vaikeustaso
+  - 9: Vaikea vaikeustaso
+- 2: Kahden pelaajan peli
 
 ## Käynnistäminen
 
@@ -21,3 +29,5 @@ Pelin tavoite on saada pallo vastustajan puoleiseen seinään. Pallo kimpoaa yl�
 Peli loppuu 11 pisteeseen paitsi jos loputon moodi on päällä.
 
 Pelin voi koska tahansa sulkea painamalla ESC-näppäintä.
+
+Huom tietokantaan tallennetaan vain normaalimoodin tulokset. Loputtomassa moodissa tietokantaan ei tallenneta mitään.
