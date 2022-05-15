@@ -22,6 +22,8 @@ Pelin aloitusruudussa toimivat seuraavat valinnat (näppäimistöllä):
 
 ## Pelaaminen
 
+Kun olet valinnut haluamasi asetukset aloitusnäytöllä, voit aloittaa pelin painamalla välilyöntiä tai enteriä.
+
 Pelaaja 1 liikuttaa näytön vasemmalla puolella olevaa mailaa w, s näppäimillä ja pelaaja 2 näytön oikealla puolella olevaa mailaa ylä- ja alanuolilla.
 
 Pelin tavoite on saada pallo vastustajan puoleiseen seinään. Pallo kimpoaa ylä- ja alaseinistä samalla tavalla joka kerta mutta maila muuttaa pallon suuntaa ja nopeutta.
