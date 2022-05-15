@@ -1,5 +1,6 @@
 import unittest
 import pygame
+import database
 from eventhandler import EventHandler
 from sprites.paddle import Paddle
 from sprites.ball import Ball
@@ -55,6 +56,9 @@ class TestEventhandler(unittest.TestCase):
         self.assertEqual(self.eventhandler.check_game_clear(), False)
         self.score[0] += 1
         self.assertEqual(self.eventhandler.check_game_clear(), True)
+        db_connection = database.create_connection()
+        database.delete_latest(db_connection)
+        database.close_connection(db_connection)
 
     def test_p1_score(self):
         self.ball.rect.x = 0

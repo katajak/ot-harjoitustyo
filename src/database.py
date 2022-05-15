@@ -63,6 +63,16 @@ def insert_data(connection, players, difficulty, score, max_rally):
     except Error:
         print(Error)
 
+def delete_latest(connection):
+    try:
+        sql = ("DELETE FROM stats ORDER BY id DESC LIMIT 1")
+        cur = connection.cursor()
+        cur.execute(sql)
+        connection.commit()
+
+    except Error:
+        print(Error)
+
 def games_played(connection):
     """Hakee, kuinka monta peliä on pelattu.
 

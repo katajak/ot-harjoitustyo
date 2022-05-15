@@ -83,35 +83,35 @@ class TitleScreen:
         title_rect = title.get_rect(center=(self.display_size[0]/2, 80))
 
         if self.endless is True:
-            endless = normalfont.render("Endless Mode", True, (255, 255, 255))
+            endless = normalfont.render("Endless Mode", True, (255, 0, 255))
         if self.endless is False:
-            endless = normalfont.render("Normal Mode", True, (255, 255, 255))
+            endless = normalfont.render("Normal Mode", True, (0, 255, 255))
         endless_rect = endless.get_rect(center=(self.display_size[0]/4 - 60, self.display_size[1]/2))
 
         if self.players == 1:
-            players = normalfont.render("One Player", True, (255, 255, 255))
+            players = normalfont.render("One Player", True, (127, 255, 127))
         if self.players == 2:
-            players = normalfont.render("Two Players", True, (255, 255, 255))
+            players = normalfont.render("Two Players", True, (255, 127, 0))
         players_rect = players.get_rect(center=(self.display_size[0]/4 - 60 + self.display_size[0]/2
                                         + players.get_width(), self.display_size[1]/2))
         if self.difficulty == "Easy":
-            difficulty = normalfont.render("Easy", True, (255, 255, 255))
+            difficulty = normalfont.render("Easy", True, (0, 255, 0))
         if self.difficulty == "Medium":
-            difficulty = normalfont.render("Medium", True, (255, 255, 255))
+            difficulty = normalfont.render("Medium", True, (255, 255, 0))
         if self.difficulty == "Hard":
-            difficulty = normalfont.render("Hard", True, (255, 255, 255))
+            difficulty = normalfont.render("Hard", True, (255, 0, 0))
         difficulty_rect = difficulty.get_rect(center=(self.display_size[0]/4 - 60 + self.display_size[0]/2
                                               + players.get_width(), self.display_size[1]/2 + difficulty.get_height()))
 
         controls = normalfont.render("Controls:", True, (255, 255, 255))
         controls_rect = controls.get_rect(center=(self.display_size[0]/2, self.display_size[1] - controls.get_height()*5))
-        player1 = normalfont.render("Player 1: W, S", True, (255, 255, 255))
+        player1 = normalfont.render("Player 1: W, S", True, (0, 255, 0))
         player1_rect = player1.get_rect(center=(self.display_size[0]/2, self.display_size[1] - player1.get_height()*4))
-        player2 = normalfont.render("Player 2: Up Arrow, Down Arrow", True, (255, 255, 255))
+        player2 = normalfont.render("Player 2: Up Arrow, Down Arrow", True, (0, 0, 255))
         player2_rect = player2.get_rect(center=(self.display_size[0]/2, self.display_size[1] - player2.get_height()*3))
-        start = normalfont.render("Start Game: Return or Space", True, (255, 255, 255))
+        start = normalfont.render("Start Game: Return or Space", True, (255, 255, 0))
         start_rect = start.get_rect(center=(self.display_size[0]/2, self.display_size[1] - start.get_height()*2))
-        esc = normalfont.render("Quit Game: ESC", True, (255, 255, 255))
+        esc = normalfont.render("Quit Game: ESC", True, (255, 0, 0))
         esc_rect = esc.get_rect(center=(self.display_size[0]/2, self.display_size[1] - esc.get_height()))
 
         db_connection = database.create_connection()
