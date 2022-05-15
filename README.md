@@ -44,6 +44,6 @@ poetry run invoke lint
 
 [Changelog](https://github.com/katajak/ot-harjoitustyo/blob/master/dokumentaatio/changelog.md)
 
-[Testausdokumentti]()
+[Testausdokumentti](https://github.com/katajak/ot-harjoitustyo/blob/master/dokumentaatio/testausdokumentti.md)
 
 [Arkkitehtuuri](https://github.com/katajak/ot-harjoitustyo/blob/master/dokumentaatio/arkkitehtuuri.md)

@@ -45,3 +45,4 @@ Yht. 36 tuntia
 ## 15.5.
 - Yksinpeli, vaikeustasovalinnat (2t)
 - Tilastot aloitusruudussa (1t)
+- Docstring, testejä, dokumentaatio jne. (3t)

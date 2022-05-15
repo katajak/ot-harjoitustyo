@@ -1,5 +1,13 @@
 # Käyttöohje
 
+## Käynnistäminen
+
+Suorita komennot projektin juurihakemistossa:
+
+poetry install
+
+poetry run invoke start
+
 ## Konfigurointi
 
 Pelin aloitusruudussa toimivat seuraavat valinnat (näppäimistöllä):
@@ -12,14 +20,6 @@ Pelin aloitusruudussa toimivat seuraavat valinnat (näppäimistöllä):
   - 9: Vaikea vaikeustaso
 - 2: Kahden pelaajan peli
 
-## Käynnistäminen
-
-Suorita komennot projektin juurihakemistossa:
-
-poetry install
-
-poetry run invoke start
-
 ## Pelaaminen
 
 Pelaaja 1 liikuttaa näytön vasemmalla puolella olevaa mailaa w, s näppäimillä ja pelaaja 2 näytön oikealla puolella olevaa mailaa ylä- ja alanuolilla.
@@ -30,4 +30,4 @@ Peli loppuu 11 pisteeseen paitsi jos loputon moodi on päällä.
 
 Pelin voi koska tahansa sulkea painamalla ESC-näppäintä.
 
-Huom tietokantaan tallennetaan vain normaalimoodin tulokset. Loputtomassa moodissa tietokantaan ei tallenneta mitään.
+Huomaathan että tietokantaan tallennetaan vain normaalimoodin tulokset. Loputtomassa moodissa tietokantaan ei tallenneta mitään.
