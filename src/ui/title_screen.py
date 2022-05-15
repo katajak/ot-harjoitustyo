@@ -8,7 +8,29 @@ from ui.renderer import Renderer
 from eventhandler import EventHandler
 
 class TitleScreen:
+    """Luokka, joka vastaa aloitusruudusta.
+
+    Attributes:
+        screen: pygame näyttö
+        fps: pygame kello
+        display_size: näytön koko (800x600)
+        players: pelaajamäärä
+        endless: loputon moodi (True tai False)
+        difficulty: vaikeustaso
+    """
+
     def __init__(self, screen, fps, display_size, players, endless, difficulty):
+        """Luokan konstruktori
+
+        Args:
+            screen: pygame näyttö
+            fps: pygame kello
+            display_size: näytön koko (800x600)
+            players: pelaajamäärä
+            endless: loputon moodi (True tai False)
+            difficulty: vaikeustaso
+        """
+
         self.screen = screen
         self.fps = fps
         self.display_size = display_size
@@ -17,6 +39,12 @@ class TitleScreen:
         self.difficulty = difficulty
 
     def inputs(self):
+        """Käyttäjän syötteet aloitusruudussa.
+
+        Returns:
+            True, jos peli aloitetaan
+        """
+
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
                 sys.exit()
@@ -43,6 +71,10 @@ class TitleScreen:
                     self.difficulty = "Hard"
 
     def draw_title_screen(self):
+        """Aloitusruudun piirto.
+
+        """
+
         titlefont = pygame.font.SysFont("Impact", 128)
         normalfont = pygame.font.SysFont("Helvetica", 24)
         self.screen.fill([0, 0, 0])
@@ -113,6 +145,10 @@ class TitleScreen:
         self.fps.tick(30)
 
     def start_game(self):
+        """Aloittaa pelin.
+
+        """
+
         DISPLAY_WIDTH = 800
         DISPLAY_HEIGHT = 600
         DISPLAY_SIZE = (DISPLAY_WIDTH, DISPLAY_HEIGHT)
