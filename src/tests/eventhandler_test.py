@@ -11,12 +11,16 @@ class TestEventhandler(unittest.TestCase):
         self.display_height = 600
         self.display_size = (self.display_width, self.display_height)
 
+        self.players = 2
+        self.difficulty = "-"
+
         self.paddle1_color = [0, 255, 0]
         self.paddle2_color = [0, 0, 255]
         self.ball_color = [255, 255, 255]
 
         self.paddle1_speed = 7
         self.paddle2_speed = 7
+        self.paddle_speeds = (self.paddle1_speed, self.paddle2_speed)
 
         self.player1_score = 0
         self.player2_score = 0
@@ -30,12 +34,13 @@ class TestEventhandler(unittest.TestCase):
         self.paddle2.rect.x = self.display_size[0] - 30 - 8
         self.paddle2.rect.y = int(self.display_size[1]/2 - 40)
 
+        self.paddles = (self.paddle1, self.paddle2)
+
         self.ball = Ball(self.ball_color, 8, self.display_size)
         self.ball.rect.x = self.display_size[0]/2 + 8
         self.ball.rect.y = self.display_size[1]/2 + 8
 
-        self.eventhandler = EventHandler(self.paddle1, self.paddle2, self.paddle1_speed, self.paddle1_speed,
-                                         self.ball, self.display_size, self.score)
+        self.eventhandler = EventHandler(self.paddles, self.paddle_speeds, self.ball, self.display_size, self.score, self.players, self.difficulty)
 
     def test_update(self):
         for i in range(30):

@@ -1,4 +1,5 @@
 import pygame
+import database
 from ui.title_screen import TitleScreen
 
 pygame.init()
@@ -8,13 +9,18 @@ DISPLAY_WIDTH = 800
 DISPLAY_HEIGHT = 600
 DISPLAY_SIZE = (DISPLAY_WIDTH, DISPLAY_HEIGHT)
 
-PLAYERS = 2
+PLAYERS = 1
 ENDLESS = False
+DIFFICULTY = "Medium"
 
 screen = pygame.display.set_mode(DISPLAY_SIZE)
 fps = pygame.time.Clock()
 
-titlescreen = TitleScreen(screen, fps, DISPLAY_SIZE, PLAYERS, ENDLESS)
+db_connection = database.create_connection()
+database.create_table(db_connection)
+database.close_connection(db_connection)
+
+titlescreen = TitleScreen(screen, fps, DISPLAY_SIZE, PLAYERS, ENDLESS, DIFFICULTY)
 
 while True:
     if titlescreen.inputs() is True:

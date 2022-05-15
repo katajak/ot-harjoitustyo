@@ -48,4 +48,18 @@ class Paddle(pygame.sprite.Sprite):
         self.rect.y += n_pixels
         if self.rect.y >= self.display_height - self.height:
             self.rect.y = self.display_height - self.height
-        
+
+    def ai_move(self, ball, n_pixels):
+        """Tietokone siirtää mailaa alaspäin n pikseliä.
+
+        Args:
+            n_pixels: kuinka monta pikseliä mailaa siirretään
+        """
+
+        if self.rect.y + self.height/2 > ball.rect.y:
+            self.rect.y -= n_pixels
+        if self.rect.y + self.height/2 < ball.rect.y:
+            self.rect.y += n_pixels
+        self.rect.y = max(self.rect.y, 0)
+        if self.rect.y >= self.display_height - self.height:
+            self.rect.y = self.display_height - self.height
