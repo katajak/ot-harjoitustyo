@@ -4,11 +4,13 @@ Perinteinen Pong-peli. Pelaaja 1 liikuttaa mailaa W, S näppäimillä ja Pelaaja
 
 ## Releaset
 
+[Loppupalautus](https://github.com/katajak/ot-harjoitustyo/releases/tag/loppupalautus)
+
 [Viikko 6](https://github.com/katajak/ot-harjoitustyo/releases/tag/viikko6)
 
 [Viikko 5](https://github.com/katajak/ot-harjoitustyo/releases/tag/viikko5)
 
-## Käyttöohjeet
+## Asennusohjeet
 
 Suorita komennot projektin juurihakemistossa
 
@@ -41,5 +43,7 @@ poetry run invoke lint
 [Työaikakirjanpito](https://github.com/katajak/ot-harjoitustyo/blob/master/dokumentaatio/tyoaikakirjanpito.md)
 
 [Changelog](https://github.com/katajak/ot-harjoitustyo/blob/master/dokumentaatio/changelog.md)
+
+[Testausdokumentti]()
 
 [Arkkitehtuuri](https://github.com/katajak/ot-harjoitustyo/blob/master/dokumentaatio/arkkitehtuuri.md)
